@@ -1,1 +1,4 @@
-<h1>hello world</h1>
+<script>
+	const name = 'world'
+</script>
+<h1>{(`hello ${name}`).toLocaleUpperCase()}!</h1>
