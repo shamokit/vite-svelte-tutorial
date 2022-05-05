@@ -3,6 +3,7 @@
 	import Counter from "./lib/Counter.svelte";
 	import HelloWorld from "./components/HelloWorld.svelte";
 	import Paragraph from "./components/Paragraph.svelte";
+	import HtmlTest from "./components/HtmlTest.svelte";
 </script>
 
 <main>
@@ -12,6 +13,7 @@
 	<Counter />
 	<HelloWorld />
 	<Paragraph />
+	<HtmlTest />
 </main>
 
 <style>
