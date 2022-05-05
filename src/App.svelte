@@ -4,6 +4,7 @@
 	import HelloWorld from "./components/HelloWorld.svelte";
 	import Paragraph from "./components/Paragraph.svelte";
 	import HtmlTest from "./components/HtmlTest.svelte";
+	import List from "./components/List.svelte";
 </script>
 
 <main>
@@ -14,6 +15,7 @@
 	<HelloWorld />
 	<Paragraph />
 	<HtmlTest />
+	<List />
 </main>
 
 <style>
