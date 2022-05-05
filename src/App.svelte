@@ -6,19 +6,25 @@
 	import HtmlTest from "./components/HtmlTest.svelte";
 	import List from "./components/List.svelte";
 	import Answer from "./components/Answer.svelte";
-	let answer: string = ''
-	$: answerWithExclamation = ():string => {
-		if(answer) {
-			console.log('test')
-			return `${answer} !!`
+	import Info, { TypeInfo } from "./components/Info.svelte";
+	let answer: string = "";
+	$: answerWithExclamation = (): string => {
+		if (answer) {
+			console.log("test");
+			return `${answer} !!`;
 		} else {
-			return answer
+			return answer;
 		}
-	}
+	};
 	const setAnswer = (newAnswer: string) => {
-		answer = newAnswer
-	}
-
+		answer = newAnswer;
+	};
+	const info: TypeInfo = {
+		name: "Svelte",
+		version: "1.0.0",
+		speed: 2,
+		website: "https://svelte.jp",
+	};
 </script>
 
 <main>
@@ -30,21 +36,25 @@
 	<Paragraph />
 	<HtmlTest />
 	<List />
-	<hr>
+	<hr />
 	<Answer />
 	<p>answerに値を渡さなかった場合初期値が表示される</p>
 	<Answer answer={answerWithExclamation()} />
 	<p>値を渡すとリアクティブに変更される</p>
-	<hr>
-	<button on:click={() => setAnswer('cat')}>set answer</button>
-	<p>on:clickは値を返さないvoid関数をそのまま渡せないので、そういう時は即時関数で渡す</p>
+	<hr />
+	<button on:click={() => setAnswer("cat")}>set answer</button>
+	<p>
+		on:clickは値を返さないvoid関数をそのまま渡せないので、そういう時は即時関数で渡す
+	</p>
+	<hr />
+	<Info {info} />
 </main>
 
 <style>
 	:root {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 			Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		--main-color: 255, 62 ,0;
+		--main-color: 255, 62, 0;
 	}
 
 	main {
