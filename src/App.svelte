@@ -2,6 +2,7 @@
 	import Counter from "./lib/Counter.svelte";
 	import HelloWorld from "./components/HelloWorld.svelte";
 	import Logo from "./components/Logo.svelte";
+	import Paragraph from "./components/Paragraph.svelte";
 </script>
 
 <main>
@@ -9,8 +10,8 @@
 	<h1>Hello Typescript!</h1>
 
 	<Counter />
-
 	<HelloWorld />
+	<Paragraph />
 </main>
 
 <style>
@@ -35,18 +36,8 @@
 		max-width: 14rem;
 	}
 
-	p {
-		max-width: 14rem;
-		margin: 1rem auto;
-		line-height: 1.35;
-	}
-
 	@media (min-width: 480px) {
 		h1 {
-			max-width: none;
-		}
-
-		p {
 			max-width: none;
 		}
 	}
