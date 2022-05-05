@@ -6,7 +6,7 @@
 	};
 	$: {
 		console.log(count)
-		increment() //incrementが二度呼ばれた後countがconosleに出る
+		increment() //incrementが二度呼ばれた後countがconosleに出る doubleはここでは再計算されない
 	}
 </script>
 

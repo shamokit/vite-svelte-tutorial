@@ -5,6 +5,20 @@
 	import Paragraph from "./components/Paragraph.svelte";
 	import HtmlTest from "./components/HtmlTest.svelte";
 	import List from "./components/List.svelte";
+	import Answer from "./components/Answer.svelte";
+	let answer: string = ''
+	$: answerWithExclamation = ():string => {
+		if(answer) {
+			console.log('test')
+			return `${answer} !!`
+		} else {
+			return answer
+		}
+	}
+	const setAnswer = (newAnswer: string) => {
+		answer = newAnswer
+	}
+
 </script>
 
 <main>
@@ -16,6 +30,13 @@
 	<Paragraph />
 	<HtmlTest />
 	<List />
+	<hr>
+	<Answer {answer} />
+	<Answer answer={answerWithExclamation()} />
+	<p>値を返すもの関数はそのままでOK</p>
+	<hr>
+	<button on:click={() => setAnswer('cat')}>set answer</button>
+	<p>値を返さないものは即時関数で</p>
 </main>
 
 <style>
