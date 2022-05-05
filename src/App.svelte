@@ -31,12 +31,13 @@
 	<HtmlTest />
 	<List />
 	<hr>
-	<Answer {answer} />
+	<Answer />
+	<p>answerに値を渡さなかった場合初期値が表示される</p>
 	<Answer answer={answerWithExclamation()} />
-	<p>値を返すもの関数はそのままでOK</p>
+	<p>値を渡すとリアクティブに変更される</p>
 	<hr>
 	<button on:click={() => setAnswer('cat')}>set answer</button>
-	<p>値を返さないものは即時関数で</p>
+	<p>on:clickは値を返さないvoid関数をそのまま渡せないので、そういう時は即時関数で渡す</p>
 </main>
 
 <style>
