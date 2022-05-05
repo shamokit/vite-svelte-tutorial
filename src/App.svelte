@@ -6,7 +6,8 @@
 	import HtmlTest from "./components/HtmlTest.svelte";
 	import List from "./components/List.svelte";
 	import Answer from "./components/Answer.svelte";
-	import Info, { TypeInfo } from "./components/Info.svelte";
+	import Info from "./components/Info.svelte";
+	import type { TypeInfo } from './types/Info'
 	let answer: string = "";
 	$: answerWithExclamation = (): string => {
 		if (answer) {

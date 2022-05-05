@@ -1,14 +1,14 @@
 <script lang="ts" context="module">
-	// 型はcontext="module"に分けて書く
-	export type TypeInfo = {
-		name: string;
-		version: string;
-		speed: number;
-		website: string;
-	};
+	// 型はsvelteファイル内に書きたいときはcontext="module"に分けて書く　分離したほうがよさそう。
+	// export type TypeInfo = {
+	// 	name: string;
+	// 	version: string;
+	// 	speed: number;
+	// 	website: string;
+	// };
 </script>
-
 <script lang="ts">
+	import type { TypeInfo } from '../types/Info'
 	export let info: TypeInfo = {
 		//export const にするとpropsが反映されなくなる。
 		name: "",
