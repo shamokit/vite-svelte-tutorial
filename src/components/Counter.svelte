@@ -4,6 +4,10 @@
 	const increment = () => {
 		count += 1;
 	};
+	$: {
+		console.log(count)
+		increment() //incrementが二度呼ばれた後countがconosleに出る
+	}
 </script>
 
 <button on:click={increment}>
