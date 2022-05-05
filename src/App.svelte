@@ -1,11 +1,11 @@
 <script lang="ts">
-	import logo from "./assets/svelte.png";
 	import Counter from "./lib/Counter.svelte";
 	import HelloWorld from "./components/HelloWorld.svelte";
+	import Logo from "./components/Logo.svelte";
 </script>
 
 <main>
-	<img src={logo} alt="Svelte Logo" />
+	<Logo />
 	<h1>Hello Typescript!</h1>
 
 	<Counter />
@@ -23,11 +23,6 @@
 		text-align: center;
 		padding: 1em;
 		margin: 0 auto;
-	}
-
-	img {
-		height: 16rem;
-		width: 16rem;
 	}
 
 	h1 {
