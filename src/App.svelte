@@ -1,7 +1,7 @@
 <script lang="ts">
+	import Logo from "./components/Logo.svelte";
 	import Counter from "./lib/Counter.svelte";
 	import HelloWorld from "./components/HelloWorld.svelte";
-	import Logo from "./components/Logo.svelte";
 	import Paragraph from "./components/Paragraph.svelte";
 </script>
 
