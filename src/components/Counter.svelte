@@ -1,5 +1,6 @@
 <script lang="ts">
 	let count: number = 1;
+	$: double = count * 2
 	const increment = () => {
 		count += 1;
 	};
@@ -8,6 +9,7 @@
 <button on:click={increment}>
 	Clicks: {count} {count === 1 ? 'time' : 'times'}
 </button>
+<p>double: {double}</p>
 
 <style>
 	button {
