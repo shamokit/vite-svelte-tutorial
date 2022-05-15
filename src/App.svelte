@@ -7,6 +7,7 @@
 	import List from "./components/List.svelte";
 	import Answer from "./components/Answer.svelte";
 	import Info from "./components/Info.svelte";
+	import LoginButton from "./components/LoginButton.svelte";
 	import type { TypeInfo } from './types/Info'
 	let answer: string = "";
 	$: answerWithExclamation = (): string => {
@@ -49,6 +50,8 @@
 	</p>
 	<hr />
 	<Info {info} />
+	<hr />
+	<LoginButton />
 </main>
 
 <style>
