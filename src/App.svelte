@@ -10,7 +10,7 @@
 	import LoginButton from "./components/LoginButton.svelte";
 	import NumberLength from "./components/NumberLength.svelte";
 	import Cats from "./components/Cats.svelte";
-	import type { TypeInfo } from './types/Info'
+	import type { TypeInfo } from "./types/Info";
 	let answer: string = "";
 	$: answerWithExclamation = (): string => {
 		if (answer) {
@@ -29,6 +29,19 @@
 		speed: 2,
 		website: "https://svelte.jp",
 	};
+
+	import Thing, { emojis } from "./components/Thing.svelte";
+	type Emoji = keyof typeof emojis;
+	let things: {
+		id: number;
+		name: Emoji;
+	}[] = [
+		{ id: 1, name: "apple" },
+		{ id: 2, name: "banana" },
+		{ id: 3, name: "carrot" },
+		{ id: 4, name: "doughnut" },
+		{ id: 5, name: "egg" },
+	];
 </script>
 
 <main>
@@ -58,6 +71,11 @@
 	<NumberLength />
 	<hr />
 	<Cats />
+	<hr />
+	{#each things as thing (thing.id)}
+		<Thing name={thing.name} />
+	{/each}
+	<Thing name="banana" />
 </main>
 
 <style>
