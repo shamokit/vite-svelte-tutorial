@@ -14,3 +14,8 @@
 		Log in
 	</button>
 {/if}
+{#if !user.loggedIn}
+	<button on:click={toggle}>
+		Log in
+	</button>
+{/if}
