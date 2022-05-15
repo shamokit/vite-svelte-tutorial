@@ -1,7 +1,7 @@
 <script lang="ts">
 	type Cat = {
 		id: string
-		name: string
+		name?: string
 	}
 	let cats: Cat[] = [
 		{ id: 'J---aiyznGQ', name: 'Keyboard Cat' },
