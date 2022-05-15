@@ -10,6 +10,7 @@
 	import LoginButton from "./components/LoginButton.svelte";
 	import NumberLength from "./components/NumberLength.svelte";
 	import Cats from "./components/Cats.svelte";
+	import RandomNumberMessage from "./components/RandomNumberMessage.svelte";
 	import type { TypeInfo } from "./types/Info";
 	let answer: string = "";
 	$: answerWithExclamation = (): string => {
@@ -73,9 +74,11 @@
 	<Cats />
 	<hr />
 	{#each things as thing (thing.id)}
-		<Thing name={thing.name} />
+	<Thing name={thing.name} />
 	{/each}
 	<Thing name="banana" />
+	<hr />
+	<RandomNumberMessage />
 </main>
 
 <style>
